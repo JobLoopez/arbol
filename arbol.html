@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Jerárquica de Árbol</title>
+    <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           line-height: 1.6;
+           background-color: #e8f5e9;
+       }
+
+       pre {
+           background-color: #f3e5f5; 
+           padding: 10px;
+           border-left: 4px solid #81c784; 
+           overflow-x: auto;
+       }
+
+       h1, h2, h3 {
+           color: #388e3c; 
+       }
+
+       button {
+           background-color: #64b5f6; 
+           color: #fff;
+           cursor: pointer;
+           font-weight: bold;
+           border-radius: 15px; 
+           padding: 12px;
+           margin: 5px;
+       }
+
+       button:hover {
+           background-color: #42a5f5; 
+           transform: scale(1.05); 
+       }
+    </style>
+</head>
+<body>
+
+    <h1>Estructura Jerárquica de Árbol</h1>
+    <p>Una <strong>estructura jerárquica de árbol</strong> es una organización de datos donde cada nodo o elemento
+        tiene una relación de dependencia con otros, de forma que solo tiene un nodo padre y puede tener múltiples
+        hijos. Este tipo de estructura es muy usada en el ámbito de la informática para representar relaciones jerárquicas.</p>
+
+    <h2>Implementación de una Jerarquía de Árbol en Python</h2>
+
+    <pre><code>class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.hijos = []
+
+    def agregar_hijo(self, hijo):
+        self.hijos.append(hijo)
+
+    def mostrar(self, nivel=0):
+        print(' ' * nivel * 4 + str(self.valor))
+        for hijo in self.hijos:
+            hijo.mostrar(nivel + 1)
+
+# Crear la raíz del árbol
+raiz = Nodo("Raíz")
+
+# Crear nodos hijos
+hijo1 = Nodo("Hijo 1")
+hijo2 = Nodo("Hijo 2")
+hijo3 = Nodo("Hijo 3")
+
+# Agregar los hijos a la raíz
+raiz.agregar_hijo(hijo1)
+raiz.agregar_hijo(hijo2)
+
+# Agregar hijos a "Hijo 1"
+hijo1.agregar_hijo(Nodo("Hijo 1.1"))
+hijo1.agregar_hijo(Nodo("Hijo 1.2"))
+
+# Agregar un hijo a "Hijo 2"
+hijo2.agregar_hijo(Nodo("Hijo 2.1"))
+
+# Agregar un hijo a "Hijo 3" (opcional, si fuera necesario)
+hijo3.agregar_hijo(Nodo("Hijo 3.1"))
+
+# Agregar "Hijo 3" bajo la raíz
+raiz.agregar_hijo(hijo3)
+
+# Mostrar el árbol
+raiz.mostrar()
+</code></pre>
+
+    <h2>¿Qué es una Estructura de Árbol?</h2>
+    <p>Una estructura de árbol es una forma de organización visual o conceptual que permite ver los datos de
+        forma jerárquica. En esta estructura se pueden encontrar los siguientes elementos:</p>
+    <ul>
+        <li><strong>Raíz</strong>: Nodo principal o inicial del árbol, sin nodos superiores.</li>
+        <li><strong>Nodos</strong>: Cada uno de los elementos o puntos de datos en el árbol.</li>
+        <li><strong>Hijos</strong>: Nodos que dependen de un nodo superior (padre).</li>
+        <li><strong>Hojas</strong>: Nodos sin nodos descendientes.</li>
+    </ul>
+
+    <h2>¿Por qué se usa la Estructura de Árbol?</h2>
+    <ul>
+        <li><strong>Organización eficiente</strong>: Ayuda a almacenar datos estructurados para una búsqueda rápida.</li>
+        <li><strong>Modelado de relaciones</strong>: Facilita la representación de relaciones como las de una empresa, un sistema de archivos o un menú.</li>
+        <li><strong>Navegación sencilla</strong>: Como en los sistemas de archivos, la estructura de árbol permite una navegación rápida y ordenada.</li>
+        <li><strong>Optimización de búsqueda</strong>: Tipos de árboles como el árbol binario de búsqueda permiten realizar búsquedas, inserciones y eliminaciones con mayor rapidez.</li>
+        <li><strong>Árboles de decisión</strong>: Se usan en análisis de decisiones, donde cada nodo representa una opción o pregunta que define el siguiente paso.</li>
+    </ul>
+
+    <p>En conclusión, la estructura de árbol es fundamental en programación y matemáticas por su capacidad para organizar y simplificar la manipulación de datos.</p>
+    
+   

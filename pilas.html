@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto de Pilas en Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6; 
+            color: #424242; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1976d2; 
+            text-align: center;
+        }
+
+        h2 {
+            color: #d84315; 
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        pre {
+            background-color: #fce4ec;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #ff4081;
+        }
+
+        button {
+            background-color: #42a5f5;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 10px;
+            padding: 12px;
+            margin: 5px;
+            border: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #1e88e5; 
+            transform: scale(1.05); 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Introducción a Pilas en Java</h1>
+    <h2>Definición de una Pila</h2>
+    <p>Una pila es una estructura de datos que sigue el concepto LIFO (Last In, First Out), es decir, el último elemento en entrar es el primero en salir. Este tipo de estructura es útil en múltiples aplicaciones, especialmente en programación.</p>
+    
+    <h2>Operaciones Básicas de una Pila</h2>
+    <ul>
+        <li><strong>push:</strong> Inserta un nuevo elemento en la cima de la pila.</li>
+        <li><strong>pop:</strong> Elimina y devuelve el elemento de la cima de la pila.</li>
+        <li><strong>peek:</strong> Muestra el elemento de la cima sin quitarlo.</li>
+        <li><strong>isEmpty:</strong> Comprueba si la pila no tiene elementos.</li>
+    </ul>
+    
+    <h2>Ejemplo de Implementación en Java</h2>
+    <p>En Java, la clase <code>Stack</code> de la biblioteca estándar permite manejar pilas de manera sencilla. Aquí tienes un ejemplo básico:</p>
+    <pre>
+<code>import java.util.Stack;
+
+public class EjemploPila {
+    public static void main(String[] args) {
+        Stack<Integer> pila = new Stack<>();
+        
+        // Agregar elementos
+        pila.push(1);
+        pila.push(2);
+        pila.push(3);
+        
+        // Mostrar el elemento en la cima
+        System.out.println("Elemento en la cima: " + pila.peek());
+        
+        // Retirar el elemento
+        System.out.println("Elemento retirado: " + pila.pop());
+        
+        // Verificar si la pila está vacía
+        System.out.println("¿La pila está vacía? " + pila.isEmpty());
+    }
+}
+</code>
+    </pre>
+</div>
+
+<button onclick="window.location.href='inf.html'">Regresar</button>
+<button onclick="window.location.href='portada.html'">Inicio</button>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas en Java</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; 
+            color: #004d00; 
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #007f3d; 
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #b2ebf2; 
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #a5d6a7; 
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        li:hover {
+            background: #81c784; 
+        }
+        button {
+  background-color: #9cf0ff; 
+  color: #04020e;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px; 
+  padding: 20px;
+}
+button:hover {
+  background-color: #6fff8e; 
+  transform: scale(1.05); 
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Listas en Java</h1>
+        <p>Las listas en Java son estructuras de datos que permiten almacenar elementos en una secuencia ordenada. 
+            Hay varias implementaciones de listas en Java, pero las más comunes son:</p>
+        <ul>
+            <li><strong>ArrayList:</strong> Implementa la interfaz List y almacena elementos de manera dinámica, 
+                permitiendo acceder a ellos por su índice.</li>
+            <li><strong>LinkedList:</strong> También implementa la interfaz List, pero está compuesta por nodos, 
+                lo que permite una inserción y eliminación más eficiente en comparación con ArrayList.</li>
+            <li><strong>Vector:</strong> Similar a ArrayList, pero es sincronizado y por lo tanto es más seguro para 
+                el uso en múltiples hilos.</li>
+            <li><strong>Stack:</strong> Una subclase de Vector que representa una pila (LIFO - Last In First Out).</li>
+        </ul>
+        <p>Las listas son muy útiles para manejar colecciones de datos y su elección depende de los requisitos 
+            específicos de rendimiento y funcionalidad en la aplicación.</p>
+    </div>
+    <button onclick="window.location.href='inf.html'">Regresar</button>
+    <button onclick="window.location.href='portada.html'">Inicio</button>
+</body>
+</html>
